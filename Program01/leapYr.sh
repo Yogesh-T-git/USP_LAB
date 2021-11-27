@@ -1,8 +1,13 @@
 #!/bin/sh
 
-echo "enter temperature in faren"
-read f
-v1=`echo "$f-32" | bc`
-v2=`echo "scale=2; 5/9" | bc`
-c=`echo "$v1 * $v2" | bc`
-echo $c
+echo "Enter the year"
+read year
+if [ `expr $year % 400` -eq 0  ]; then
+echo "$year is a leap year"
+elif [ `expr $year % 100` -eq 0  ]; then
+echo "$year is not a leap year"
+elif [ `expr $year % 4` -eq 0  ]; then
+echo "$year is a leap year"
+else
+echo "$year is not a leap year"
+fi
