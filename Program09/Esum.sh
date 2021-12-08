@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Enter n"
 read n
 Esum=0
